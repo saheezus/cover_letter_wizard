@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume from Job Description</title>
+    <style>
+        body {
+            background: url('https://images.pexels.com/photos/5326905/pexels-photo-5326905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #db4606;
+            font-family: "Londrina Shadow", sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        textarea {
+            width: 90%;
+            min-height: 150px;
+            padding: 15px;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f4f4f4;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            resize: vertical;
+            margin-bottom: 50px;
+        }
+        textarea:focus {
+            border-color: #5b9bd5;
+            outline: none;
+            box-shadow: 0 0 8px rgba(91, 155, 213, 0.5);
+        }
+        input[type="submit"] {
+            background-color: #3b5998;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2a4170;
+        }
+        label {
+            color: #db4606;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cover Letter Wizard</h1>
+        <form action="/submit" method="POST">
+            <label for="text_input">Resume:</label>
+            <textarea id="text_input" name="text_input" placeholder="Copy and paste your resume information here"></textarea>
+            
+            <label for="text_input_2">Job Description:</label>
+            <textarea id="text_input_2" name="text_input_2" placeholder="Copy and paste the job description details here"></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
